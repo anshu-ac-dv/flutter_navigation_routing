@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_navigation_routing/screen_two.dart';
+import 'package:flutter_navigation_routing/utilities/routes_name.dart';
 
 class HomeScreen extends StatelessWidget {
-  static const String id = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -18,15 +17,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    SecondScreen.id,
-                    arguments: {'name': 'Anshu'},
-                  );
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => SecondScreen(name : "Anshu")),
-                  // );
+                  Navigator.pushNamed(context, RoutesName.SecondScreen);
                 },
                 child: Container(
                   height: 50,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_navigation_routing/home_screen.dart';
-import 'package:flutter_navigation_routing/screen_three.dart';
-import 'package:flutter_navigation_routing/screen_two.dart';
+import 'package:flutter_navigation_routing/utilities/routes.dart';
+import 'package:flutter_navigation_routing/utilities/routes_name.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: HomeScreen.id,
-      routes: {
-        HomeScreen.id: (context) => HomeScreen(),
-        SecondScreen.id: (context) => SecondScreen(),
-        ThiredScreen.id: (context) => ThiredScreen(),
-      },
+      initialRoute: RoutesName.HomeScreen,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
